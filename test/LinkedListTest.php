@@ -11,4 +11,13 @@ class LinkedListTest extends TestCase
         $element = new LinkedListElement("One");
         $this->assertEquals(1, $element->getSize());
     }
+
+    public function testGivenListHaveTwoElements()
+    {
+        $element = new LinkedListElement("One");
+        $element2 = new LinkedListElement("Two");
+        $element->linkNextTo($element2);
+
+        $this->assertEquals(2, $element->getSize());
+    }
 }
